@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "antd": "^5.22.5",
+    "axios": "^1.7.9",
+    "react-google-fonts": "^1.2.1",
+    "react-router-dom": "^7.1.0"
+  }
+}
