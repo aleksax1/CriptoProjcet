@@ -8,7 +8,7 @@ function Footer() {
           <div style={{ width: "40%" ,display:"flex",justifyContent:'center'}}>
               <div style={{display:"flex",width:"40%",flexDirection:"column",alignItems:"start",justifyContent:"center",gap:"10px"}}>
               <h2 style={{color: "rgb(64 150 255)"}}>Crypto</h2>
-                <p>NASDAQ is a global electronic marketplace for buying and trading securities. It features stocks of technology giants, innovative startups, and industry leaders. We are known for our cutting-edge trading systems and diverse market offerings</p>
+                <p>Crypto is a global electronic marketplace for buying and trading securities. It features stocks of technology giants, innovative startups, and industry leaders. We are known for our cutting-edge trading systems and diverse market offerings</p>
               </div>
           </div>
           <div style={{display:'flex',flexDirection:"column",gap:"5px"}}>

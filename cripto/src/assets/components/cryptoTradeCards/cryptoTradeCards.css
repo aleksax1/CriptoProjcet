@@ -1,0 +1,14 @@
+.iconDiv{
+    display: flex;
+}
+td{
+    height: 7vh;
+    direction: inherit;   
+}
+th{
+    text-align: left;
+}
+table tr {
+    border-bottom: 1px solid black; 
+  }
+  

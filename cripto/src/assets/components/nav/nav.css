@@ -16,3 +16,9 @@
     color: rgb(64 150 255);
     font-size: xx-large;
 }
+.link{
+color:rgb(64 150 255)
+}
+.link:hover{
+    color: rgb(14, 90, 153);
+}
