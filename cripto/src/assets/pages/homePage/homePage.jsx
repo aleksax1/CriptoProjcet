@@ -52,11 +52,21 @@ function HomePage() {
         <img src={baner} alt="Baner" className="" />
       </div>
 
-      <div className="h22">
-        <h1>Crypto currencys</h1>
-      </div>
-
       <div className="conteiner">
+        <div className="titleDiv" >
+          <h3 style={{}}>Explore crypto like Bitcoin, Ethereum, and Dogecoin</h3>
+          <h4>Simply and securely buy, sell, and manage hundreds of cryptocurrencies.</h4>
+        <Button
+            type="primary"
+            shape="round"
+          style={{ height: "6vh", width: "8vw" }}
+          onClick={() => navigate("/cripto")}
+        >
+          See all
+        </Button>
+        </div>
+        <div className="cardsDiv">
+
         {loading ? (
           <h3>Loading...</h3>
         ) : coins.length > 0 ? (
@@ -64,17 +74,10 @@ function HomePage() {
         ) : (
           <h3>CONTENT SOON</h3>
         )}
+        </div>
       </div>
 
-      <div className="btnSA">
-        <Button
-          type="primary"
-          style={{ height: "6vh", width: "8vw" }}
-          onClick={() => navigate("/cripto")}
-        >
-          See all
-        </Button>
-      </div>
+     
 
       <div className="newsLetter">
         <h2>News letter</h2>
@@ -96,7 +99,7 @@ function HomePage() {
             style={{ height: 160, resize: "none" }}
           />
         </Flex>
-        <Button type="primary" className="btn">
+        <Button type="primary" className="btn" shape="round">
           SUBMIT
         </Button>
       </div>

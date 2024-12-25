@@ -13,7 +13,7 @@ function Nav() {
           <Link className='link' style={{textDecoration:"none",paddingLeft:"5vw",fontSize:"3vh",fontWeight:"600"}}to={"/cripto"}>Products</Link>
           </div>
           <div>
-          <Button type="primary" style={{height:"5vh"}}>Login</Button>
+          <Button type="primary" shape="round" style={{height:"5vh"}}>Login</Button>
           </div>
     </div>
   )
