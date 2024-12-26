@@ -4,7 +4,7 @@ function CryptoCard({ coin }) {
   const { Meta } = Card;
   return (
     <Card
-      style={{ width: 200, height: 150,g }}
+      style={{ width: 200, height: 150 }}
       // cover={
       //   <img
       //     style={{ width: 300, height: 300 }}
