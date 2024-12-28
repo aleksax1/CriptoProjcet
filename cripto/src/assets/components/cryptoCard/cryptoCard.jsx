@@ -3,17 +3,7 @@ import React from "react";
 function CryptoCard({ coin }) {
   const { Meta } = Card;
   return (
-    <Card
-      style={{ width: 200, height: 150 }}
-      // cover={
-      //   <img
-      //     style={{ width: 300, height: 300 }}
-      //     alt="example"
-      //     src={coin.iconUrl}
-      //   />
-      // }
-      actions={[]}
-    >
+    <Card style={{ width: 200, height: 150 }}>
       <Meta
         avatar={<Avatar src={coin.iconUrl} />}
         title={`${coin.name} (${coin.symbol})`}

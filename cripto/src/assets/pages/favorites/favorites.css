@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.naslov{
+    display: flex;
+    justify-content: center;
+    padding: 4vh;
+    color: rgb(14, 90, 153);
+    font-size: x-large;
+}
+.favoritesDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 4vh 20vh;
+    gap: 5vw;
+    flex-wrap: wrap;
+}
+.criptoCard{
+    width: 200px;
+}

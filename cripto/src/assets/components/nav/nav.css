@@ -1,49 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
-.nav1{
-    display: flex;
-    background-color: aliceblue;
-    justify-content: space-around;
-    height: 8vh;
-    align-items: center;
-    
+.nav1 {
+  display: flex;
+  background-color: aliceblue;
+  justify-content: space-around;
+  height: 8vh;
+  align-items: center;
 }
-.nav1 h2{
-    color: rgb(64 150 255);
-    font-size: xx-large;
+.nav1 h2 {
+  color: rgb(64 150 255);
+  font-size: xx-large;
 }
-.link {
-    color: rgb(64, 150, 255);
-    text-decoration: none; /* Ensure no underline by default */
-  }
-  
-  .link:hover {
-    color: rgb(14, 90, 153);
-  }
-  
-  .link:visited {
-    color: rgb(64, 150, 255); 
-  }
-  
-  .active {
-    color: rgb(13, 34, 49);
-  }
-  
-  .linksNav {
-    display: flex;
-    height: 100%;
-    gap: 3vw;
-  }
-  
-  .linksNav div {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+
+.link:hover {
+  color: rgb(14, 90, 153);
+}
+
+.link:visited {
+  color: rgb(64, 150, 255);
+}
+
+.active {
+  color: rgb(12, 97, 157);
+}
+
+.linksNav {
+  display: flex;
+  height: 100%;
+  gap: 3vw;
+}
+
+.linksNav div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

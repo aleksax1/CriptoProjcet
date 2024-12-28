@@ -8,10 +8,12 @@ import { Button } from "antd";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import CryptotradeCards from "../../components/cryptoTradeCards/cryptotradeCards";
+import { useContext } from "react";
+import { AppContext } from "../../../context/AppContext";
 
 function CryptoList() {
   const [coins, setCoins] = useState([]);
-
+  const {favorites,setFavorites,setCoinToFavorites}= useContext(AppContext)
   const fetchCoins = async () => {
     const options = {
       method: "GET",
@@ -38,10 +40,11 @@ function CryptoList() {
       console.error(error);
     }
   };
-  console.log(coins);
+
   useEffect(() => {
     fetchCoins();
   }, []);
+  console.log(coins)
   return (
     <>
       <div className="coinContainer">

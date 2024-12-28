@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import baner from "./baner.png";
 import "./criptoPage.css";
-import { useState } from "react";
 import CryptoList from "../../containers/home/cryptoList";
 import { Input } from "antd";
 function CriptoPage() {

@@ -1,24 +1,26 @@
-import { Route,Routes,BrowserRouter } from 'react-router-dom'
-import './App.css'
-import HomePage from './assets/pages/homePage/homePage'
-import CriptoPage from './assets/pages/criptoPage/criptoPage'
-import Nav from './assets/components/nav/nav'
-import Footer from './assets/components/footer/footer'
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Footer from "./assets/components/footer/footer";
+import Nav from "./assets/components/nav/nav";
+import CriptoPage from "./assets/pages/criptoPage/criptoPage";
+import HomePage from "./assets/pages/homePage/homePage";
+import Favorites from "./assets/pages/favorites/favorites";
+import SingleCoin from "./assets/pages/singleCoin/SingleCoin";
 function App() {
-
   return (
     <>
-      <BrowserRouter>
-          <Nav/>
-        <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/cripto' element={<CriptoPage />} />
-        </Routes>
-        <Footer/>
-      </BrowserRouter>
+        <BrowserRouter>
+          <Nav />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/cripto" element={<CriptoPage />} />
+            <Route path="/favorites" element={<Favorites />} />
+            <Route path="/singleCoin:uuid" element={<SingleCoin />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

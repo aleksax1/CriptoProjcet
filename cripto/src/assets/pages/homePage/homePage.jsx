@@ -1,13 +1,13 @@
 import { Button, Flex } from "antd";
+import TextArea from "antd/es/input/TextArea";
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import CryptoCard from "../../components/cryptoCard/cryptoCard.jsx";
 import baner from "./baner.png";
 import "./homePage.css";
-import TextArea from "antd/es/input/TextArea";
-import { useState } from "react";
-import CryptoCard from "../../components/cryptoCard/cryptoCard.jsx";
-import { useNavigate } from "react-router-dom";
 function HomePage() {
+  
   const navigate = useNavigate();
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -41,10 +41,11 @@ function HomePage() {
       setLoading(false);
     }
   };
-  console.log(coins);
+
   useEffect(() => {
     fetchCoins();
   }, []);
+
   return (
     <div>
       <div className="baner">
@@ -53,31 +54,31 @@ function HomePage() {
       </div>
 
       <div className="conteiner">
-        <div className="titleDiv" >
-          <h3 style={{}}>Explore crypto like Bitcoin, Ethereum, and Dogecoin</h3>
-          <h4>Simply and securely buy, sell, and manage hundreds of cryptocurrencies.</h4>
-        <Button
+        <div className="titleDiv">
+          <h3>Explore crypto like Bitcoin, Ethereum, and Dogecoin</h3>
+          <h4>
+            Simply and securely buy, sell, and manage hundreds of
+            cryptocurrencies.
+          </h4>
+          <Button
             type="primary"
             shape="round"
-          style={{ height: "6vh", width: "8vw" }}
-          onClick={() => navigate("/cripto")}
-        >
-          See all
-        </Button>
+            style={{ height: "6vh", width: "8vw" }}
+            onClick={() => navigate("/cripto")}
+          >
+            See all
+          </Button>
         </div>
         <div className="cardsDiv">
-
-        {loading ? (
-          <h3>Loading...</h3>
-        ) : coins.length > 0 ? (
-          coins.map((coin) => <CryptoCard key={coin.id} coin={coin} />)
-        ) : (
-          <h3>CONTENT SOON</h3>
-        )}
+          {loading ? (
+            <h3>Loading...</h3>
+          ) : coins.length > 0 ? (
+            coins.map((coin) => <CryptoCard key={coin.id} coin={coin} />)
+          ) : (
+            <h3>CONTENT SOON</h3>
+          )}
         </div>
       </div>
-
-     
 
       <div className="newsLetter">
         <h2>News letter</h2>

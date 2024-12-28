@@ -1,20 +1,22 @@
-import { Button } from "antd";
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { HeartFilled } from "@ant-design/icons";
+import { Badge, Button } from "antd";
+import React, { useContext, useEffect, useState } from "react";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { AppContext } from "../../../context/AppContext";
 import "./nav.css";
-import{HeartFilled} from "@ant-design/icons";
 function Nav() {
-  const [activeLink, setActiveLink] = useState("");
-  const handeleChanges = (link) => {
-    setActiveLink(link);
-  };
+  const { favorites } = useContext (AppContext);
+  const navigate = useNavigate()
   const location = useLocation();
-  console.log(activeLink);
   console.log(location);
+  useEffect(() => {
+    console.log(favorites.lenght, "favoriteslenght");
+    console.log(Array.isArray(favorites))
+  }, [favorites]);
   return (
     <div className="nav1">
       <div>
-        <Link
+        <NavLink
           style={{
             textDecoration: "none",
             fontSize: "5vh",
@@ -25,25 +27,29 @@ function Nav() {
           className="link"
         >
           Crypto
-        </Link>
+        </NavLink>
       </div>
       <div className="linksNav">
         <div>
-          <Link
+          <NavLink
             to={"/"}
             style={{
               textDecoration: "none",
               fontSize: "3vh",
               fontWeight: "600",
             }}
-            className={`link ${location.pathname === "/cripto" ? "active" : ""}`}
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : "link"
+            }
           >
             Home page
-          </Link>
+          </NavLink>
         </div>
-      <div>
-          <Link
-            className={`link ${location.pathname === "/cripto" ? "active" : ""}`}
+        <div>
+          <NavLink
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : "link"
+            }
             style={{
               textDecoration: "none",
               fontSize: "3vh",
@@ -52,17 +58,29 @@ function Nav() {
             to={"/cripto"}
           >
             Products
-          </Link>
+          </NavLink>
         </div>
       </div>
-      
-      <div style={{display:"flex" ,gap:"10px"}}>
-        <Button type="primary" shape="round" style={{ height: "5vh" }} icon={<HeartFilled />}>
-          Favorites
-        </Button>
-        <Button type="primary" shape="round" style={{ height: "5vh" }}>
-          Login
-        </Button>
+
+      <div style={{ display: "flex", gap: "10px" }}>
+        <div>
+          <Badge count={favorites.length}>
+            <Button
+              type="primary"
+              shape="round"
+              style={{ height: "5vh" }}
+              icon={<HeartFilled />}
+              onClick={()=>navigate("/favorites")}
+            >
+              Favorites
+            </Button>
+          </Badge>
+        </div>
+        <div>
+          <Button type="primary" shape="round" style={{ height: "5vh" }}>
+            Login
+          </Button>
+        </div>
       </div>
     </div>
   );
