@@ -5,7 +5,12 @@ import { useNavigate } from "react-router-dom";
 const { Meta } = Card;
 
 function FavoriteCard({ coin }) {
-    const navigate =useNavigate()
+    const navigate = useNavigate()
+
+    const handleProductClick = (uuid) => {
+        navigate(`/singleCoin/${uuid}`);
+    };
+
   return (
     <div>
       <Card
@@ -28,7 +33,7 @@ function FavoriteCard({ coin }) {
             </div>
           }
               />
-              <Button style={{marginTop:"2vh",height:'5vh',color:"rgb(14, 90, 153);"}} onClick={()=>navigate("/singleCoin")}>See more..</Button>
+              <Button style={{marginTop:"2vh",height:'5vh',color:"rgb(14, 90, 153);"}} onClick={() => handleProductClick(coin.uuid)}>See more..</Button>
       </Card>
     </div>
   );

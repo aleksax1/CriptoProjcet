@@ -15,7 +15,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/cripto" element={<CriptoPage />} />
             <Route path="/favorites" element={<Favorites />} />
-            <Route path="/singleCoin:uuid" element={<SingleCoin />} />
+            <Route path="/singleCoin/:uuid" element={<SingleCoin />} />
           </Routes>
           <Footer />
         </BrowserRouter>
