@@ -44,7 +44,6 @@ function CryptoList() {
   useEffect(() => {
     fetchCoins();
   }, []);
-  console.log(coins)
   return (
     <>
       <div className="coinContainer">

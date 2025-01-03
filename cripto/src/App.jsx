@@ -6,6 +6,7 @@ import CriptoPage from "./assets/pages/criptoPage/criptoPage";
 import HomePage from "./assets/pages/homePage/homePage";
 import Favorites from "./assets/pages/favorites/favorites";
 import SingleCoin from "./assets/pages/singleCoin/SingleCoin";
+import Login from "./assets/pages/login/login";
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/cripto" element={<CriptoPage />} />
             <Route path="/favorites" element={<Favorites />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/singleCoin/:uuid" element={<SingleCoin />} />
           </Routes>
           <Footer />

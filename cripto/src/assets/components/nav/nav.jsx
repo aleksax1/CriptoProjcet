@@ -7,12 +7,7 @@ import "./nav.css";
 function Nav() {
   const { favorites } = useContext (AppContext);
   const navigate = useNavigate()
-  const location = useLocation();
-  console.log(location);
-  useEffect(() => {
-    console.log(favorites.lenght, "favoriteslenght");
-    console.log(Array.isArray(favorites))
-  }, [favorites]);
+  
   return (
     <div className="nav1">
       <div>
@@ -77,7 +72,7 @@ function Nav() {
           </Badge>
         </div>
         <div>
-          <Button type="primary" shape="round" style={{ height: "5vh" }}>
+          <Button type="primary" shape="round" style={{ height: "5vh" }} onClick={()=>navigate("/login")}>
             Login
           </Button>
         </div>

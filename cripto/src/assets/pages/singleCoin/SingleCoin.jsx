@@ -80,8 +80,7 @@ function SingleCoin() {
     <div className="single-coin-container">
       {selectedCoin ? (
         <Card className="coin-card">
-          <Row gutter={16}>
-            <Col span={12} className="coin-info">
+        
               <div className="coin-header">
                 <img
                   src={selectedCoin.iconUrl}
@@ -101,6 +100,10 @@ function SingleCoin() {
                   {parseInt(selectedCoin.marketCap).toLocaleString()} USD
                 </p>
                 <p>
+                  <strong>Place on market: </strong>
+                  {selectedCoin.rank}
+                </p>
+                <p>
                   <strong>24h Change: </strong>
                   <span
                     style={{
@@ -113,24 +116,13 @@ function SingleCoin() {
               
                 <Button
                   onClick={() => navigate("/favorites")}
-                  style={{ marginTop: "10px" }}
+                  style={{ marginTop: "10px",width:"20%" }}
                   type="primary"
                 >
                   Back to Favorites
                 </Button>
               </div>
-            </Col>
-            <Col span={12} className="coin-chart">
-              <h3>Price History (24h)</h3>
-              <div className="coin-chart-placeholder">
-                {sparklineData.length ? (
-                  <Line data={data} />
-                ) : (
-                  <p>Loading chart...</p>
-                )}
-              </div>
-            </Col>
-          </Row>
+            
         </Card>
       ) : (
         <p>Loading coin details or coin not found...</p>

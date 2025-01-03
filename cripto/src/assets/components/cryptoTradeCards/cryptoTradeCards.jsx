@@ -1,13 +1,15 @@
-import { HeartFilled, HeartOutlined } from "@ant-design/icons";
-import { Button, Tooltip } from "antd";
+import {
+  HeartFilled,
+  HeartOutlined,
+  LineChartOutlined,
+} from "@ant-design/icons";
+import { Button } from "antd";
 import React, { useContext } from "react";
-import { Line, LineChart, ResponsiveContainer } from "recharts";
 import { AppContext } from "../../../context/AppContext";
 import "./cryptoTradeCards.css";
 
 function CryptotradeCards({ coins }) {
   const { favorites, setCoinToFavorites } = useContext(AppContext);
-  console.log("favorites", favorites);
 
   return (
     <div
@@ -59,17 +61,7 @@ function CryptotradeCards({ coins }) {
                 </td>
                 <td>${parseFloat(coin.price).toFixed(2)}</td>
                 <td style={{}}>
-                  <ResponsiveContainer width={100}>
-                    <LineChart data={coin.sparkline}>
-                      <Tooltip />
-                      <Line
-                        type="monotone"
-                        dataKey="price"
-                        stroke={coin.color || "#8884d8"}
-                        strokeWidth={2}
-                      />
-                    </LineChart>
-                  </ResponsiveContainer>
+                  <LineChartOutlined />
                 </td>
                 <td
                   style={{
@@ -79,7 +71,7 @@ function CryptotradeCards({ coins }) {
                   {coin.change}%
                 </td>
                 <td>${coin.marketCap}</td>
-                <td>{coin["24hVolume"]}</td>
+                <td>{coin["24hVolume"]} pc.</td>
                 <td>{coin.symbol}</td>
                 <td>
                   <Button
