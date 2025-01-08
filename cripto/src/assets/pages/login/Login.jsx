@@ -2,8 +2,10 @@ import React from 'react';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Form, Input } from 'antd';
 import './Login.css'; 
-
+import { useNavigate } from 'react-router-dom';
+0
 function Login() {
+  const navigate = useNavigate()
   return (
     <div className="login-container">
       <Form
@@ -11,6 +13,8 @@ function Login() {
         initialValues={{ remember: true }}
         className="login-form"
       >
+                <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Login GIT </h2>
+
         <Form.Item
           name="username"
           rules={[{ required: true, message: 'Please input your Username!' }]}
@@ -35,7 +39,7 @@ function Login() {
           <Button block type="primary" htmlType="submit">
             Log in
           </Button>
-          or <a href="">Register now!</a>
+          or <a onClick={()=>navigate("/reg")}>Register now!</a>
         </Form.Item>
       </Form>
     </div>
