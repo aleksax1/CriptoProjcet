@@ -18,7 +18,7 @@ function App() {
             <Route path="/cripto" element={<CriptoPage />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/reggit" element={<Register />} />
+            <Route path="/reg" element={<Register />} />
             <Route path="/singleCoin/:uuid" element={<SingleCoin />} />
           </Routes>
           <Footer />
