@@ -1,12 +1,12 @@
 {
-  "homepage": "http://aleksax1.github.io/CriptoProjcet",
+  "homepage": "http://aleksax1.github.io",
   "name": "cripto",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeplay":"npm run build",
-    "deplay":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
