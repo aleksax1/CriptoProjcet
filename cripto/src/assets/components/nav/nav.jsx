@@ -27,7 +27,7 @@ function Nav() {
       <div className="linksNav">
         <div>
           <NavLink
-            to={"/"}
+            to={"/CriptoProjcet"}
             style={{
               textDecoration: "none",
               fontSize: "3vh",
