@@ -14,7 +14,7 @@ function App() {
         <BrowserRouter>
           <Nav />
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/CriptoProjcet" element={<HomePage />} />
             <Route path="/cripto" element={<CriptoPage />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/login" element={<Login />} />

@@ -18,7 +18,7 @@ function Nav() {
             fontWeight: "600",
             color: "rgb(64 150 255)",
           }}
-          to={"/"}
+          to={"/CriptoProjcet"}
           className="link"
         >
           Crypto
